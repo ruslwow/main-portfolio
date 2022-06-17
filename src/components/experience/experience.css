@@ -1,0 +1,164 @@
+#experience {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 0;
+    min-height: 100vh;
+    background: var(--color-bg);
+    opacity: 0.75;
+    margin-top: 100px;
+}
+.experience__tittle {
+    font-weight: 800;
+     font-size: 24px;
+    letter-spacing: 1px;
+    color: var(--color-white);
+} 
+
+
+
+    .container__experience {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container__experience .card {
+        position: relative;
+        width: 250px;
+        height: 300px;
+        text-align: center;
+        z-index: 10;
+        margin: 20px 20px 60px;
+        transition: 0.5s;
+    }
+
+    .container__experience .card .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 10;
+        border-radius: 10px;
+    }
+
+    .percent {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        z-index: 100;
+    }
+
+    .percent .number {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .percent .number h2 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 50px;
+    }
+    .percent .number h2 span {
+        font-size: 24px;
+    }
+    .card__text {
+        position: absolute;
+        bottom: -42px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 30px 20px 10px;
+        background: #f00;
+        border-radius: 10px;
+        font-weight: 800;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        pointer-events: none;
+        transition: bottom 0.5s, z-index 0s, transform 0.5s, padding 0.5s;
+        transition-delay: 0.5s, 0.5s, 0s, 0.5s;
+        color: #fff;
+    }
+
+    .card:hover .card__text {
+        transition-delay: 0.5s, 0.5s, 0s, 0.5s;
+        bottom: -70px;
+        z-index: 11;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 10px 20px 10px;
+    }
+    .card:nth-child(1) .card__text {
+        background: #58077e;
+    }
+
+    .card:nth-child(2) .card__text {
+        background: #c50b0b;
+    }
+
+    .card:nth-child(3) .card__text {
+        background: #78990a;
+    }
+
+    .card:nth-child(4) .card__text {
+        background: #624f56;
+    }
+
+    .card__svg{
+       position:relative;
+       width: 150px;
+       height: 150px;
+    }
+    .card__svg circle {
+        width: 100%;
+        height: 100%;
+        fill: none;
+        stroke-width: 10;
+        stroke: rgba(255, 255, 255, 0.05);
+        transform: translate(5px, 5px);
+        stroke-linecap: round;
+    } 
+   
+    .card__svg circle:nth-child(2) 
+    {
+        stroke: #fff;
+        stroke-dasharray: 440px;
+        stroke-dashoffset: 440px;
+    }
+
+    .card:nth-child(1) .card__svg circle:nth-child(2)  {
+        stroke-dashoffset: calc(440px - (440px * 99) / 100);
+    }
+
+    .card:nth-child(2) .card__svg circle:nth-child(2)  {
+        stroke-dashoffset: calc(440px - (440px * 97) / 100);
+    }
+
+
+    .card:nth-child(3) .card__svg circle:nth-child(2)  {
+        stroke-dashoffset: calc(440px - (440px * 79) / 100);
+    }
+
+
+    .card:nth-child(4) .card__svg circle:nth-child(2)  {
+        stroke-dashoffset: calc(440px - (440px * 67) / 100);
+    }
